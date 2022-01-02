@@ -6,6 +6,14 @@
     },
     "TANT_QUE": {
         "prefix": ["TANT_QUE"],
-        "body": ["TANT_QUE ${1} FAIRE", "${2}", "FIN_TANT_QUE"]
+        "body": ["TANT_QUE ${1} FAIRE", "\t${2}", "FIN_TANT_QUE"]
+    },
+    "SI": {
+        "prefix": ["SI"],
+        "body": ["SI ${1} FAIRE", "\t${2}", "FIN_SI"]
+    },
+    "SI_SINON": {
+        "prefix": ["SI"],
+        "body": ["SI ${1} FAIRE", "\t${2}", "SINON FAIRE", "\t${3}", "FIN_SI"]
     }
 }
