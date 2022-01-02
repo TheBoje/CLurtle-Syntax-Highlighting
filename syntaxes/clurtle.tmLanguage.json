@@ -1,0 +1,113 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CLurtle",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#numerics"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"begin": "\\#\\#\\#",
+					"end": "\\#\\#\\#",
+					"beginCaptures": {
+						"0": { "name": "comment.block.open.clurtle" }
+					},
+					"endCaptures": {
+						"0": { "name": "comment.block.close.clurtle" }
+					},
+					"name": "comment.block.clurtle"
+				}, 
+				{
+					"captures": {
+						"0": { "name": "comment.line.clurtle" }
+					},
+					"begin": "\\#",
+					"end": "\\n",
+					"name":"comment.line.start.clurtle"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.clurtle",
+				"match": "\\b(POUR|ALLANT_A|SI|SINON|FAIRE|FIN_SI|FIN_POUR|TANT_QUE|FIN_TANT_QUE)\\b"
+			},
+			{
+				"name": "entity.name.function.member.clurtle",
+				"match": "\\b(BAISSER|LEVER|CHANGER_COULEUR|TOURNER|AVANCER|LIGNE|RECTANGLE)\\b"
+			}, {
+				"name": "keyword.operator.comparison.clurtle",
+				"match": "\\b(SUP_A|SUP_EGAL_A|INF_A|INF_EGAL_A|EGAL_A)\\b"
+			}, {
+				"name": "constant.language.color.clurtle",
+				"match": "\\b(NOIR|BLANC|ROUGE|VERT|BLEU|JAUNE|VIOLET|MARRON)\\b"
+			}
+		]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.terminator.statement.clurtle",
+					"match": ";"
+				}
+			]
+		},
+		"numerics": {
+			"patterns": [
+				{
+					"name": "constant.numeric.decimal.clurtle",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other.clurtle",
+					"match": "[a-z]+([a-z]+|\\_)*"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.arithmetic.clurtle",
+					"match": "\\b(\\+|\\-)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.clurtle",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.clurtle",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.cl"
+}

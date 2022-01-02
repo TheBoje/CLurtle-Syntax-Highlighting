@@ -1,0 +1,25 @@
+{
+    "name": "clurtle-syntax-highlighting",
+    "displayName": "CLurtle Syntax Highlighting",
+    "description": "provide syntax highlighting for CL files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "clurtle",
+            "aliases": ["CLurtle", "clurtle"],
+            "extensions": [".cl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "clurtle",
+            "scopeName": "source.cl",
+            "path": "./syntaxes/clurtle.tmLanguage.json"
+        }]
+    }
+}
