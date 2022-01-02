@@ -1,25 +1,48 @@
 {
-    "name": "clurtle-syntax-highlighting",
-    "displayName": "CLurtle Syntax Highlighting",
-    "description": "provide syntax highlighting for CL files",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.63.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "clurtle",
-            "aliases": ["CLurtle", "clurtle"],
-            "extensions": [".cl"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "clurtle",
-            "scopeName": "source.cl",
-            "path": "./syntaxes/clurtle.tmLanguage.json"
-        }]
-    }
+	"name": "clurtle-syntax-highlighting",
+	"displayName": "CLurtle Syntax Highlighting",
+	"description": "provide syntax highlighting for CL files",
+	"publisher": "TheBoJe",
+	"author": {
+		"name": "TheBoJe",
+		"url": "https://github.com/TheBoje"
+	},
+	"repository": {
+		"url": "https://github.com/TheBoje/CLurtle-Syntax-Highlighting"
+	},
+	"version": "0.0.2",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "clurtle",
+				"aliases": [
+					"CLurtle",
+					"clurtle"
+				],
+				"extensions": [
+					".cl"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "clurtle",
+				"scopeName": "source.cl",
+				"path": "./syntaxes/clurtle.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "06f00f7e-edc0-4fd4-adc9-f27db95cabf4",
+		"publisherDisplayName": "TheBoJe",
+		"publisherId": "3e32c1c8-2854-455e-b6e1-78be7ab44c1c",
+		"isPreReleaseVersion": false
+	}
 }

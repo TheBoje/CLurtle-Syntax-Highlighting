@@ -94,6 +94,10 @@
 				{
 					"name": "keyword.operator.arithmetic.clurtle",
 					"match": "\\b(\\+|\\-)\\b"
+				},
+				{
+					"name": "keyword.operator.assignment.clurtle",
+					"match": "="
 				}
 			]
 		},
