@@ -58,7 +58,7 @@
 				"match": "\\b(BAISSER|LEVER|CHANGER_COULEUR|TOURNER|AVANCER|LIGNE|RECTANGLE)\\b"
 			}, {
 				"name": "keyword.operator.comparison.clurtle",
-				"match": "\\b(SUP_A|SUP_EGAL_A|INF_A|INF_EGAL_A|EGAL_A)\\b"
+				"match": "\\b(>|>=|<|<=|=)\\b"
 			}, {
 				"name": "constant.language.color.clurtle",
 				"match": "\\b(NOIR|BLANC|ROUGE|VERT|BLEU|JAUNE|VIOLET|MARRON)\\b"
@@ -93,11 +93,11 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.arithmetic.clurtle",
-					"match": "\\b(\\+|\\-)\\b"
+					"match": "\\b(\\+|\\-|\\*|\\/)\\b"
 				},
 				{
 					"name": "keyword.operator.assignment.clurtle",
-					"match": "="
+					"match": "<-"
 				}
 			]
 		},
