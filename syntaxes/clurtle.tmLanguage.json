@@ -51,7 +51,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.clurtle",
-				"match": "\\b(POUR|ALLANT_A|SI|SINON|FAIRE|FIN_SI|FIN_POUR|TANT_QUE|FIN_TANT_QUE)\\b"
+				"match": "\\b(POUR|ALLANT_A|SI|SINON|FAIRE|FIN_SI|FIN_POUR|TANT_QUE|FIN_TANT_QUE|DE)\\b"
 			},
 			{
 				"name": "entity.name.function.member.clurtle",
@@ -70,6 +70,20 @@
 				{
 					"name": "punctuation.terminator.statement.clurtle",
 					"match": ";"
+				},
+				{
+					"begin": "\\(",
+					"end": "\\)",
+					"beginCaptures": {
+						"0": { "name": "punctuation.paren.open.clurtle" }
+					},
+					"endCaptures": {
+						"0": { "name": "punctuation.paren.open.clurtle" }
+					},
+					"patterns": [{
+						"include": "#everything"
+					}],
+					"name": "meta.parens.clurtle"
 				}
 			]
 		},
@@ -109,6 +123,31 @@
 				{
 					"name": "constant.character.escape.clurtle",
 					"match": "\\\\."
+				}
+			]
+		}, 
+		"everything": {
+			"patterns": [
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#numerics"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#variables"
+				},
+				{
+					"include": "#punctuation"
+				},
+				{
+					"include": "#strings"
 				}
 			]
 		}

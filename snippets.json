@@ -1,8 +1,7 @@
 {
     "POUR": {
         "prefix": ["POUR"],
-        "body": ["POUR ${1:x} ALLANT_A ${2:valeur} FAIRE", "\t${3}", "FIN_POUR;"],
-        "description": "Une boucle POUR"
+        "body": ["POUR ${1:x} DE ${2:0} ALLANT_A ${3:valeur} FAIRE", "\t${4}", "FIN_POUR;"]
     },
     "TANT_QUE": {
         "prefix": ["TANT_QUE"],
